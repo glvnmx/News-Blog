@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+body {
+  font-family: "OpenSans-Regular", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0f0d0e;
+}
+
+li {
+  list-style-type: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #000000;
+}
+
+button:hover {
+  background-color: #a48a39;
+  cursor: pointer;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold",Arial, sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.page {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  padding-top: 64px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  width: 100%;
+  min-width: 1200px;
+  height: 450px;
+  color: white;
+  background-image: url("../images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+.header::after {
+  content: "";
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.6;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.header-logo {
+  width: 183px;
+  padding-top: 35px;
+  padding-left: 10%;
+}
+
+.header-menu {
+  padding-right: 10%;
+}
+
+.menu-list {
+  padding-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.menu-list-item-link {
+  color: white;
+  font-size: 13px;
+}
+
+.menu-list-item-link:hover {
+  color: white;
+}
+
+.header-title {
+  position: relative;
+  width: 55%;
+  z-index: 3;
+  margin-top: 134px;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 75px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-content {
+  width: 778px;
+  box-sizing: border-box;
+}
+
+.post {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.image-container {
+  position: relative;
+  z-index: 3;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.post-picture {
+  display: block;
+  max-width: 381px;
+  height: auto;
+}
+
+.post-picture::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eff6f1;
+  position: absolute;
+  opacity: 1;
+}
+
+.post-info {
+  margin-left: 30px;
+}
+
+.post-header {
+  margin-bottom: 57px;
+}
+
+.post-tags-list {
+  display: flex;
+  gap: 18px;
+}
+
+.post-tags-list-item {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.post-tags-list-item-link {
+  color: #b59f5b;
+}
+
+.post-tags-list-item-link:hover {
+  color: #b59f5b;
+}
+
+.post-title {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.time-post {
+  display: inline-block;
+  font-size: 12px;
+  color: #888888;
+  margin-top: 36px;
+}
+
+.author-post {
+  display: inline-block;
+  margin-top: 36px;
+  font-size: 12px;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  margin-left: 15px;
+  font-weight:bold;
+}
+
+.post-text {
+  margin-top: 20px;
+  font-family: "OpenSans-Regular", Arial, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+}
+
+.side-posts:nth-child(n + 2) {
+  margin-top: 59px;
+}
+
+.side-post-header {
+  margin-bottom: 43px;
+  position: relative;
+}
+
+.side-post-header::after {
+    content: " ______ ";
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 26px;
+    color: #b59f5b;
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 105px;
+}
+
+.side-post-title {
+  text-align: center;
+}
+
+.new-post-article {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 22px;
+}
+
+.new-post-picture::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eff6f1;
+  position: absolute;
+  opacity: 1;
+}
+
+.new-post-info {
+  margin-left: 19px;
+}
+
+.time-side-post {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 9px;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+} 
+
+.field-search-group {
+  width: 100%;
+  height: 47px;
+  padding: 19px;
+  box-sizing: border-box;
+  background-color: #f4f7f6;
+  border: 2px solid #f4f7f6;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.search-section {
+  position: relative;
+}
+
+.field-search-group:focus {
+  outline: 2px solid #b59f5b;
+}
+
+
+.search-button {
+  position: absolute;
+  width: 49px;
+  height: 47px;
+  background-color: #b59f5b;
+  background-position: center center;
+  background-size: cover;
+  border: 2px solid #b59f5b;
+  background-size: 18px;
+  right: 0;
+  top: 0;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.email-section {
+  margin-top: 39px;
+}
+
+.subscribe-button {
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+  height: 47px;
+  background-color: #b59f5b;
+  font-size: 14px;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 2px solid #b59f5b;
+}
+
+.field-input-email {
+  width: 100%;
+  height: 47px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f4f7f6;
+  border: 2px solid #f4f7f6;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.field-input-email:focus {
+  outline: 2px solid #b59f5b;
+  outline-offset: 3px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags-list-item {
+  font-size: 12px;
+  border: 3px solid #f4f3f1;
+  padding: 7px 11px;
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+}
+
+.topics-list {
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.topic-list-item {
+  display: block;
+  padding-bottom: 15px;
+  border-bottom:2px solid #eeeeee;
+  display: flex;
+}
+
+.topic-list-item:nth-child(n + 2) {
+  margin-top: 15px;
+}
+
+.topic-list-item-link {
+  margin-top: 5px;
+}
+
+.topic-list-item-number {
+  margin-left: 5px;
+  color: #b59f5b;
+}
+
+.container-footer {
+  width: 1170px;
+  padding-top: 31px;
+  padding-bottom: 32px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; 
+  position: relative;
+  z-index: 3;
+}
+
+.container-footer::after {
+  content: "";
+  background-color: #f4f7f6;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-list-item:nth-child(n + 2) {
+  margin-left: 31px;
+}
+
+.social-icon-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+.social-icon-link_twitter {
+  background-image: url("../images/social/004-twitter.svg");
+}
+
+.social-icon-link_pinterest {
+  background-image: url("../images/social/001-pinterest.svg");
+}
+
+.social-icon-link_facebook {
+  background-image: url("../images/social/002-facebook-logo.svg");
+}
+
+.social-icon-link_instagram {
+  background-image: url("../images/social/005-instagram.svg");
+}
+
+.social-icon-link_tumblr {
+  background-image: url("../images/social/003-tumblr.svg");
+}
+
+.copyright-footer {
+  display: block;
+  margin-top: 73px;
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-family: "OpenSans-Bold", Arial, sans-serif;
+  color: #999999;
+  text-align: center;
+}
+
+.copyright-footer:hover {
+  color: #999999;
+}
+
+
+
